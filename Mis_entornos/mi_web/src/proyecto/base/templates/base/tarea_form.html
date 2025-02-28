@@ -1,0 +1,17 @@
+{%  extends 'base/principal.html' %}
+{% block content %}
+<div class="barra-superior">
+    <a href="{% url 'tareas' %}">&#x219E; Volvers</a>
+</div>
+<h1>Formulario de Tareas</h1>
+<div class="cuerpo-tarjeta">
+    <form method="post" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+    
+        <input type="submit" value="Guardar" class="boton">
+    </form>
+    
+</div>
+
+    {% endblock content%}
